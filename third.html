@@ -1,0 +1,27 @@
+<!-- Display current date in different formats -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment one</title>
+    </head>
+    <body>
+        <h2>Javascript program to display current date in different format:</h2>
+        <p>Below are the two different formats : </p>
+        <p id='format'></p>
+        <p id='format1'></p>
+
+<!-- Below is javascript code -->
+
+        <script>
+            var d,date,month,year;
+            d = new Date();
+            date = d.getDate(); 
+            month = d.getMonth();
+            year = d.getFullYear();
+
+            document.getElementById('format').innerHTML = ('mm-dd-yyyy : ' + month + '-' + date + '-' + year );
+            document.getElementById('format1').innerHTML = (' mm/dd/yyyy : ' + month + '/' + date + '/' + year );
+           
+        </script>
+    </body>
+</html>
