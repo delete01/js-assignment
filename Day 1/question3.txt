@@ -1,0 +1,118 @@
+Javascript Data Types
+
+
+In programming, data types is an important concept.
+To be able to operate on variables, it is important to know something about the type.
+Without data types, a computer cannot safely solve this:
+
+
+JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+1. Primitive data type
+2. Non-primitive (reference) data type
+
+JavaScript is a dynamic type language, means you don't need to specify type of the variable because it is dynamically used by JavaScript engine. 
+You need to use var here to specify the data type. 
+It can hold any type of values such as numbers, strings etc. 
+
+For example:
+
+        var a=40;//holding number  
+        var b="Rahul";//holding string  
+
+-----------------------------------------------------------------------------------------------------------------------
+
+JavaScript primitive data types
+
+There are five types of primitive data types in JavaScript. They are as follows:
+
+
+Data Type	                    Description
+
+1. String	            represents sequence of characters e.g. "hello"
+                        Strings are written with quotes. You can use single or double quotes.
+
+Example :
+
+        var carName1 = "Volvo XC60";   // Using double quotes
+        var carName2 = 'Volvo XC60';   // Using single quotes
+
+You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+
+---------------------------------------------------------------------------------------------------------------------
+2. Number	            JavaScript has only one type of numbers.
+                        Numbers can be written with, or without decimals:
+                        represents numeric values e.g. 100
+
+Example : 
+
+        var x1 = 34.00;     // Written with decimals
+        var x2 = 34;        // Written without decimals
+
+Extra large or extra small numbers can be written with scientific (exponential) notation:
+
+------------------------------------------------------------------------------------------------------------------------
+
+3. Boolean	            Booleans are often used in conditional testing.
+                        represents boolean value either false or true.
+
+Example :
+
+        var x = 5;
+        var y = 5;
+        var z = 6;
+        (x == y)       // Returns true
+        (x == z)       // Returns false
+
+------------------------------------------------------------------------------------------------------------------------
+
+4. Undefined	        In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+                        Any variable can be emptied, by setting the value to undefined. The type will also be undefined.
+                        You can also empty an object by setting it to undefined:
+
+Example :
+
+        var car = "";    // The value is "", the typeof is "string"
+
+-------------------------------------------------------------------------------------------------------------------------
+
+5. Null	                In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+                        Unfortunately, in JavaScript, the data type of null is an object.
+                        You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+                        You can empty an object by setting it to null:
+
+Example :
+
+        var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        person = null;    // Now value is null, but type is still an object
+
+------------------------------------------------------------------------------------------------------------------------
+
+JavaScript non-primitive data types
+
+The non-primitive data types are as follows:
+
+Data Type	                        Description
+
+6.Object	            JavaScript objects are written with curly braces {}.
+                        Object properties are written as name:value pairs, separated by commas.
+
+Example :
+
+        var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+7. Array	            JavaScript arrays are written with square brackets.
+                        Array items are separated by commas.
+                        The following code declares (creates) an array called cars, containing three items (car names):
+
+Example :
+
+        var cars = ["Saab", "Volvo", "BMW"];
+
+Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
+
+----------------------------------------------------------------------------------------------------------------------------

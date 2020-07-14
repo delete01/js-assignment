@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Assignment Day 1 | 14th July 2020</title>
+    </head>
+    <body>
+        <h2>Difference between Var, Let and Const </h2>
+        <h3>Var</h3>
+        <h4>Scope of var</h4>
+        <p>Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped.
+            The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
+            var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.</p>
+        <h5>Let's look at the example below to understand </h5>
+        <p>Example : </br>
+        </br>
+            var greeter = 'Hey hello'; </br>
+            function newFunction() { </br>
+                var hello = 'Hello'; </br>
+            }
+        </p>
+        <p>Here, greeter is globally scoped because it exists outside a function while hello is function scoped. So we cannot access the variable hello outside of a function. So if we do this:</p>
+        <p>Example : </br>
+        </br>
+             var tester = "hey hi";</br>
+            function newFunction() { </br>
+                var hello = "hello"; </br>
+            } </br>
+            console.log(hello); // error: hello is not defined
+        </p>
+        <h5>Problem with var</h5>
+        <p>Example : </br>
+        </br>
+            var greeter = "hey hi"; </br>
+            var times = 4; </br>
+
+            if (times > 3) { </br>
+                 var greeter = "say Hello instead";  </br>
+            } </br>
+    
+            console.log(greeter) // "say Hello instead"
+        </br></p>
+        <p>
+            So, since times > 3 returns true, greeter is redefined  to "say Hello instead". While this is not a problem if you knowingly want greeter to be redefined, it becomes a problem when you do not realize that a variable greeter has already been defined before.
+            If you have used greeter in other parts of your code, you might be surprised at the output you might get. This will likely cause a lot of bugs in your code. This is why let and const are necessary.
+        </p>
+
+        <h3>Let </h3>
+        <p>let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. </br>
+        <h5>let is block scoped</h5></br>
+        A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.</br>
+        So a variable declared in a block with let  is only available for use within that block. Let me explain this with an example: </br>
+        </br>
+        let greeting = "say Hi";</br>
+        let times = 4; </br>
+
+        if (times > 3) { </br>
+        let hello = "say Hello instead"; </br>
+        console.log(hello);// "say Hello instead" </br>
+        } </br>
+        console.log(hello) // hello is not defined </br>
+        </p>
+        <p>
+        We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because let variables are block scoped.</br>
+        <h4>let can be updated but not re-declared</h4>
+        </br> Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. So while this will work:</br>
+        let greeting = "say Hi";</br>
+        let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared </br>
+    </p>
+    <p>However, if the same variable is defined in different scopes, there will be no error: </br>
+        let greeting = "say Hi"; </br>
+        if (true) { </br>
+        let greeting = "say Hello instead"; </br>
+        console.log(greeting); // "say Hello instead" </br>
+        } </br>
+        console.log(greeting); // "say Hi" </br>
+    </p>
+    <p>Why is there no error? This is because both instances are treated as different variables since they have different scopes.
+    </br>
+        This fact makes let a better choice than var. When using let, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
+    </br>
+        Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with var does not happen.</p>
+
+       <h3> Const</h3>
+        <p>Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.
+        </p>
+        <h4>const declarations are block scoped</h4>
+        <p>Like let declarations, const declarations can only be accessed within the block they were declared.
+        </p>
+        <h4>const cannot be updated or re-declared</h4>
+        <p>This means that the value of a variable declared with const remains the same within its scope. It cannot be updated or re-declared. So if we declare a variable with const, we can neither do this:
+        </p>
+            const greeting = "say Hi"; </br>
+            greeting = "say Hello instead";// error: Assignment to constant variable. </br>
+        nor this: 
+        </br>
+            const greeting = "say Hi"; </br>
+            const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared </br>
+        <p>Every const declaration, therefore, must be initialized at the time of declaration.
+        </p>
+        <p>This behavior is somehow different when it comes to objects declared with const. While a const object cannot be updated, the properties of this objects can be updated. Therefore, if we declare a const object as this:
+        </p>
+            const greeting = { </br>
+                message: "say Hi", </br>
+                times: 4 </br>
+            } </br>
+        while we cannot do this: </br>
+        
+            const greeting = { </br>
+                words: "Hello", </br>
+                number: "five" </br>
+            } // error:  Assignment to constant variable. </br>
+        we can do this: </br>
+        
+            greeting.message = "say Hello instead"; </br>
+        <p>This will update the value of greeting.message without returning errors.</p>
+
+        
+    </body>
+    </html>
