@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 Assignment</title>
+</head>
+<body>
+    <h2>Some methods of strings in JS</h2>
+    <div>
+        <h3>search()</h3>
+        <p>The search() method searches a string for a specified value and returns the position of the match:
+
+        <h3>Extracting String Parts</h3>
+        <p>There are 3 methods for extracting a part of a string:</p>
+        <ul>
+            <li>slice(start, end)</li>
+            <li>substring(start, end)</li>
+            <li>substr(start, lenght)</li>
+        </ul>
+        <h3>The slice() Method</h3>
+        <p>slice() extracts a part of a string and returns the extracted part in a new string.</br>
+           The method takes 2 parameters: the start position, and the end position (end not included).</br>
+           If a parameter is negative, the position is counted from the end of the string.</br>
+           If you omit the second parameter, the method will slice out the rest of the string.
+        </p>
+
+        <h3>The substring() Method</h3>
+        <p>substring() is similar to slice().</br>
+            The difference is that substring() cannot accept negative indexex</br>
+            If you omit the second parameter, substring() will slice out the rest of the string.
+        </p>
+
+        <h3>The substr() Method</h3>
+        <p>substr() is similar to slice().</br>
+            The difference is that the second parameter specifies the length of extracted part.</br>
+            If you omit the second parameter, substr() will slice out the rest of the string.</br>
+            If the first parameter is negative, the position counts from the end of the string.
+        </p>
+
+        <h3>Replacing String Content</h3>
+        <p>The replace() method replaces a specified value with another value in a string.</br>
+            The replace() method does not change the string it is called on. It returns a new string.</br>
+            By default, the replace() method replaces only the first match..</br>
+            By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work..</br>
+            To replace case insensitive, use a regular expression with an /i flag (insensitive)..</br>
+            To replace all matches, use a regular expression with a /g flag (global match)..
+        </p>
+
+        <h2>Some methods of array in Js</h2>
+        <h3>toString() method in Js</h3>
+        <p>The JavaScript method toString() converts an array to a string of (comma seperated) array values.</p>
+
+        <h3>join() Method</h3>
+        <p>The join() method also joins all array elements into a string.</br>
+            It behaves just like toString(), but in addition you can specify the separator:
+        </p>
+
+        <h3>splice() Method</h3>
+        <p>The splice() method can be used to add new items to an array:</br>
+            The first parameter defines the position <b>where</b> new elements should be <b>added</b> (spliced in).</br>
+            The second parameter defines <b>how many</b> elements should be <b>removed</b>.</br>
+            The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.</br>
+            The splice() method returns an array with the deleted items:</br>
+            With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+        </p>
+
+        <h3>concat() Method</h3>
+        <p>The concat() method creates a new array by merging (concatenating) existing arrays:</br>
+            The concat() method does not change the existing arrays. It always returns a new array.</br>
+            The concat() method can take any number of array arguments:
+        </p>
+
+        <h3>slice() method</h3>
+        <p>The slice() method slices out a piece of an array into a new array.</br>
+            The slice() method creates a new array. It does not remove any elements from the source array.</br>
+            The slice() method can take two arguments like slice(1, 3).
+        </p>
+
+    <script src='script.js'></script>
+</body>
+</html>
