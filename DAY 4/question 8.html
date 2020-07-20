@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Using Arrow Function day 4 assignment</title>
+<body>
+	<h2>JavaScript program to replace function Expressions with arrow functions </h2>
+	<script>
+		
+		const ask = (question,yes,no) => {if (confirm(question)) {
+			yes()
+		}
+		else { 
+			no()
+		}
+	}
+
+		ask("Do you agree?", 
+			() => {return alert("you agreed!");}, 
+			() => { return alert("you have cancel execution!");} );
+		
+	</script>
+</body>
+</html

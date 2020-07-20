@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<body>
+		<h2>JavaScript program to pay Commission to employee on their sales during year</h2>
+		<p>Output is log inside console</p>
+		<script>
+			let sales = prompt('Enter the sale made by you during the year : ');
+			if (sales <= 5000) {
+				totalCommission = sales*2/100;
+				console.log(totalCommission);
+			}
+			else if (5001 <= sales <= 10000) {
+				totalCommission = sales*5/100;
+				console.log(totalCommission);
+			}
+			else if (10001 <= sales <= 20000) {
+				totalCommission = sales*7/100;
+				console.log(totalCommission);
+			}
+			else if (sales > 20000) {
+				totalCommission = sales*10/100;
+				console.log(totalCommission);
+			}
+			else {
+				console.log("Sorry your sales data is corrupted...")
+			}
+			
+		</script>
+	</body>
+</html>

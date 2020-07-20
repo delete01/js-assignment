@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Getting prime numbers day 4 assignment</title>
+	</head>
+	<body>
+		<h2>JavaScript program to get primes numbers from 0 to n numbers</h2>
+		<script>
+			function getPrimes(max) {
+				var s = [], i, j, primes = [];
+				for (i = 2; i <= max; ++i) {
+				    if (!s[i]) {
+				        // i has not been marked -- it is prime
+				        primes.push(i);
+				        for (j = i << 1; j <= max; j += i) {
+				            s[j] = true;
+				        }
+				    }
+				}
+				return console.log(primes);
+			}
+
+			getPrimes(prompt('From 2 to which number you want to display prime numbers :'));
+		</script>
+    </body>
+</html>
