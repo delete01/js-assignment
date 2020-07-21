@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignment</title>
+</head>
+<body>
+    <script>
+        let i = 0;
+        let n = prompt('How many numbers would you like to input? :');
+        let numarr = [];
+        let oddNumbers = [];
+        let cubes = [];
+
+        while (i < n) {
+            let num = prompt('Enter the numbers : ');
+            numarr.push(num);
+            i += 1;
+        }
+        console.log('array before sorting ' + numarr);
+        //filtering odd numbers from array
+
+        function sortOddNumbers(numbs) {
+                if (numbs % 2 != 0) {
+                    oddNumbers.push(numbs);
+                }
+        }
+
+        //generating array of cubes
+
+        function cubes(numbs) {
+            let cube = Math.pow(numbs, 3);
+            cubes.push(cube);
+        }
+
+        //getting oddNumbers
+
+        numarr.filter(sortOddNumbers);
+        console.log('after sorting : ' +  oddNumbers);
+
+        //getting cubes
+
+        cubes(oddNumbers);
+        console.log(cubes);
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name, age, email, coins) {
+            this.name = name;
+            this.age = age;
+            this.email = email;
+            this.coins = 0;
+            this.courses = [];
+            }
+
+            login() {
+                console.log(this.name + ' is logged in...');
+                return this;
+            }
+
+            logout() {
+                console.log(this.name + ' is logged out...');
+                return this;
+            }
+        }
+
+        class Moderator extends User {
+            constructor(name, age, email, coins) {
+                super(name, age, email, coins);
+            }
+
+            addCoins() {
+                 this.coins++;
+                 console.log('coins has add successfully');
+                 return this;
+            }
+
+            removeCoins() {
+                this.coins--;
+                console.log('coins has removed successfully');
+            }
+        }
+
+        class Admin extends Moderator {
+            addCourse(user, course) {
+                user.course.push(course);
+                console.log(user);
+            }
+
+            removeCourse(user, course) {
+                user.course.pop(course);
+                console.log(user);
+            }
+        }
+
+        let user1 = new User('Rahul', 22, 'rahul@gmail.com');
+        let user2 = new User('Amit', 31, 'Amit@gmail.com');
+        let mod = new Moderator('Amar', 30, 'Amar@gmail.com');
+        let admim = new Admin('Ajay', 37, 'Ajay@gmail.com');
+        let users = [user1, user2,mod,admin];
+
+        //user1.login();
+        //user1.logout();
+        //mod.addCoins();
+        //mod.removeCoins();
+        //admin.addCourse();
+        //admin.removeCourse();
+    </script>
+</body>
+</html>
