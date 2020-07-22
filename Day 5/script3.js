@@ -9,7 +9,7 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 .then(data => console.log(data))
 
 
-//using pormis 
+//using pormises 
 
 console.log('Promises');
 
