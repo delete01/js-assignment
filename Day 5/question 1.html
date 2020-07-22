@@ -28,20 +28,13 @@
         }
 
         //generating array of cubes
-
-        function cubes(numbs) {
-            let cube = Math.pow(numbs, 3);
-            cubes.push(cube);
-        }
-
-        //getting oddNumbers
-
-        numarr.filter(sortOddNumbers);
-        console.log('after sorting : ' +  oddNumbers);
+        
+        function cubeof(numbs) {
+            return (Math.pow(numbs, 3));
 
         //getting cubes
-
-        cubes(oddNumbers);
+            
+        cubes.map(cubeof(oddNumbers));
         console.log(cubes);
     </script>
 </body>
