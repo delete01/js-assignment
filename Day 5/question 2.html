@@ -60,13 +60,12 @@
         let user2 = new User('Amit', 31, 'Amit@gmail.com');
         let mod = new Moderator('Amar', 30, 'Amar@gmail.com');
         let admim = new Admin('Ajay', 37, 'Ajay@gmail.com');
-        let users = [user1, user2,mod,admin];
 
-        //user1.login();
-        //user1.logout();
-        //mod.addCoins();
-        //mod.removeCoins();
-        //admin.addCourse();
+        user1.login();
+        user1.logout();
+        mod.addCoins();
+        mod.removeCoins();
+        admin.addCourse(user1, 'javascript');
         //admin.removeCourse();
     </script>
 </body>
