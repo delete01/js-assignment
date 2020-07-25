@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 6 Assignment</title>
+    </head>
+    <body onload='changeColor'>
+        <script>
+            let colors = ["#ff2052", "#ff2620", "#a7834c", "#000720", "#c1ff20"];
+            let currentColorIndex = 0;
+
+            function changeColor() {
+                document.bgColor = colors[currentColorIndex];
+                currentColorIndex = (currentColorIndex + 1) % colors.length; 
+            }
+
+            setInterval(changeColor, 5000);
+          
+        </script>
+    </body>
+</html>

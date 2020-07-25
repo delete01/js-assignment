@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 6 Assignment </title>
+    </head>
+    <body>
+        <p id = "table"> </p>
+        <script>
+            const num = prompt('Enter the whose multiplication table you want : ');
+            let t = [];
+            let txt = "";
+
+            table(num);
+            t.forEach(myfunc);
+            document.getElementById('table').innerHTML = txt;
+
+            function table(num) {
+                let i;
+                for (i=1; i<11; i++) {
+                    t.push(num + ' * ' + i + ' = ' + num * i + '</br>'); 
+                }
+            }
+
+            function myfunc(value) {
+                txt = txt + value + '</br>';
+            }
+        </script>
+    </body>
+</html>

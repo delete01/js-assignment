@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Assignment</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+        }
+        .darkmode {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>This website features Dark Mode</h2>
+    <button onclick='darkMode()'>Toggle dark Mode</button>
+    <p id='message'></p>
+    <h4 id='time'></h4>
+    
+    <script>
+        let name = prompt('Enter your name : ');
+        document.getElementById('message').innerHTML = 'Hello ' + name;
+
+        function darkMode() {
+            let element = document.body;
+            element.classList.toggle('darkmode');
+        }
+
+        let currenttime = document.getElementById('time');
+
+        function clock() {
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            currenttime.innerText = time;
+        }
+
+        //clock
+
+        setInterval(clock, 1000);
+    </script>
+</body>
+</html>
