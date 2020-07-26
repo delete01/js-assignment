@@ -17,3 +17,5 @@ async function feth() {
   
     console.log('data using async await : ' + data);
 }
+
+fetch();
